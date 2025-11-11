@@ -2,8 +2,9 @@ import cron from "node-cron";
 import axios from "axios";
 import CoinAlertModel from "../models/CoinAlert";
 import { sendAlertEmail } from "../lib/AlertMail";
+import { ENV } from "../lib/env";
 
-const checkAlerts = async () => {
+export const checkAlerts = async () => {
   try {
     console.log("Running alert checker...");
 
@@ -74,4 +75,7 @@ const checkAlerts = async () => {
   }
 };
 
-cron.schedule("*/1 * * * *", checkAlerts);
+if (ENV.ENABLE_SELF_CRON) {
+  cron.schedule("*/1 * * * *", checkAlerts);
+}
+

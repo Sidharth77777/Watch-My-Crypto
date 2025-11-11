@@ -8,8 +8,7 @@ import coinAlertRoutes from "./routes/coinAlertRoutes";
 import fetchCoinRoutes from "./routes/fetchCoinRoutes";
 import { authLimiter } from "./middleware/rateLimiter";
 import { checkLogin } from "./middleware/checkLogin";
-import "./services/coinUpdater";
-import "./services/priceAlertCron"
+import cronRoutes from "./routes/cronRoutes";
 
 const app = express();
 
@@ -37,6 +36,8 @@ app.use("/api/auth", authLimiter, authRoutes);
 app.use("/api/coins", authLimiter, checkLogin , coinAlertRoutes);
 
 app.use("/api/fetch", fetchCoinRoutes);
+
+app.use("/api/cron", cronRoutes);
 
 const PORT = ENV.PORT || 5000;
 

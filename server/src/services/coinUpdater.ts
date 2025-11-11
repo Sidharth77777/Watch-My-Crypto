@@ -1,6 +1,7 @@
 import axios from "axios";
 import cron from "node-cron";
 import CoinModel from "./../models/CoinModel";
+import { ENV } from "../lib/env";
 
 const fetchAndStoreCoins = async (): Promise<void> => {
   try {
@@ -30,10 +31,12 @@ const fetchAndStoreCoins = async (): Promise<void> => {
   }
 };
 
-
-cron.schedule("0 0 * * *", async () => {
+if (ENV.ENABLE_SELF_CRON) {
+  cron.schedule("0 0 * * *", async () => {
   console.log("Running daily CoinGecko sync...");
   await fetchAndStoreCoins();
 });
+}
+
 
 export { fetchAndStoreCoins };
