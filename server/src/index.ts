@@ -16,7 +16,7 @@ app.use(cors({
     credentials: true,
     origin: [
         'http://localhost:3000',
-        // ENV.FRONTEND_ORIGIN
+        ENV.FRONTEND_ORIGIN as string,
         // ADD PRODUCTION URL TOO
     ],
     methods: ["GET","POST","PUT","DELETE","PATCH","OPTIONS"],
