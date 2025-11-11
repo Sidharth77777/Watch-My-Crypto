@@ -3,6 +3,7 @@
 A modern cryptocurrency price monitoring dashboard built using **Next.js**, **TypeScript**, **Express**, and **MongoDB** — with real-time price tracking, watchlists, and automatic price alert notifications.
 
 Stay updated on your favorite coins — anytime, anywhere 🚀
+
 [Live Link](https://watch-my-crypto.vercel.app/)
 
 ---
