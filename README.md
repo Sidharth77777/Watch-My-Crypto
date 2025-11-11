@@ -96,7 +96,7 @@ MongoDB (Atlas / Cloud)
 
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/Sidharth77777/Crypto-Price-Tracker/
+git clone https://github.com/Sidharth77777/Watch-My-Crypto.git
 cd WatchMyCrypto
 ```
 
