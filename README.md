@@ -1,4 +1,4 @@
-# 🔥 WatchMyCrypto — Real-Time Crypto Price Tracker & Alerts
+# WatchMyCrypto — Real-Time Crypto Price Tracker & Alerts
 
 A modern cryptocurrency price monitoring dashboard built using **Next.js**, **TypeScript**, **Express**, and **MongoDB** — with real-time price tracking, watchlists, and automatic price alert notifications.
 
