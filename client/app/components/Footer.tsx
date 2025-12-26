@@ -20,7 +20,7 @@ export default function Footer() {
             asChild
           >
             <a href="https://x.com/cryptoSid1564" target="_blank">
-              <FaXTwitter className="h-5 w-5" /> Twitter
+              <FaXTwitter className="h-5 w-5" /> X
             </a>
           </Button>
 
